@@ -1,0 +1,6 @@
+c:\users\roma\documents\visual studio 2013\Projects\CodingTest\CodingTest\bin\Debug\CodingTest.exe.config
+c:\users\roma\documents\visual studio 2013\Projects\CodingTest\CodingTest\bin\Debug\CodingTest.exe
+c:\users\roma\documents\visual studio 2013\Projects\CodingTest\CodingTest\bin\Debug\CodingTest.pdb
+c:\users\roma\documents\visual studio 2013\Projects\CodingTest\CodingTest\obj\Debug\CodingTest.csprojResolveAssemblyReference.cache
+c:\users\roma\documents\visual studio 2013\Projects\CodingTest\CodingTest\obj\Debug\CodingTest.exe
+c:\users\roma\documents\visual studio 2013\Projects\CodingTest\CodingTest\obj\Debug\CodingTest.pdb
