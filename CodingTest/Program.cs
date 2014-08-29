@@ -31,53 +31,53 @@ namespace CodingTest
             {
                 return;
             }
-            if (t.left != null)
+            if (t.level!=null)
             {
-                if (t.right != null)
+                linkSameLevel(t.level);
+            }
+
+            if (t.left!=null)
+            {
+                if (t.right!=null)
                 {
                     t.left.level = t.right;
-                }
-                else if (t.level != null)
-                {
-                    if (t.level.left != null)
-                    {
-                        t.left.level = t.level.left;
-                    }
-                    else if (t.level.right != null)
-                    {
-                        t.left.level = t.level.right;
-
-                    }
-
+                    t.right.level = GetNextLevel(t);
                 }
                 else
                 {
-                    t.left.level = null;
+                    t.left.level = GetNextLevel(t);
+                    linkSameLevel(t.left);
                 }
 
             }
-            if (t.right != null)
+            else if(t.right!=null)
             {
-                if (t.level != null)
-                {
-                    if (t.level.left != null)
-                    {
-                        t.right.level = t.level.left;
-                    }
-                    else if (t.level.right != null)
-                    {
-                        t.right.level = t.level.right;
-
-                    }
-
-                }
-                else
-                {
-                    t.right.level = null;
-                }
+                t.right.level = GetNextLevel(t);
+                linkSameLevel(t.right);
             }
-            linkSameLevel(t.left);
-            linkSameLevel(t.right);
+            else
+            {
+                linkSameLevel(GetNextLevel(t));
+            }
+        }
+
+        private static Node GetNextLevel(Node node)
+        {
+            Node temp = node.level;
+
+            while (temp!=null)
+            {
+                if (temp.left!=null)
+                {
+                    return temp.left;
+                }
+                if (temp.right!=null)
+                {
+                    return temp.right;
+                }
+                temp = temp.level;
+            }
+            return null;
         }
     }
 }
